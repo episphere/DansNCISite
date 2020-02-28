@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="invite.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="bearerToken">Bearer Token</label>
+          <input id="bearerToken" type="text" size="60' required aria-describedby="tokenHelp" />
+          <small id="tokenHelp" class="form-text text-muted">The bearer token is required.</small>
+        </div>
+        <div class="form-group">
+          <label for="startid">Starting Value NCI-</label>
+          <input id="startid" type="number" size="10' required aria-describedby="starthelp" value="2100"/>
+          <small id="starthelp" class="form-text text-muted">The starting id we are going to ask for tokens.</small>
+        </div>
+        <div class="form-group">
+          <label for="numTokens">number of tokens </label>
+          <input id="numTokens" type="number" size="10" value="3" />
+        </div>
+        <input type="button" onclick="invite(this.parentElement)" value="invite" />
+      </form>
+    </div>
+    <div class="container" id="resp"></div>
+  </body>
+</html>
