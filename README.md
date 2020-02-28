@@ -7,3 +7,4 @@ replace the "NCI-" with "GRMC-".  You may want to change the html to reflect you
 
 Have fun...
 
+[Generate tokens](https://episphere.github.io/DansNCISite/invite.html)
