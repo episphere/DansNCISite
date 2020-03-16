@@ -14,7 +14,7 @@ async function invite(formElement) {
   var length = parseInt(formElement.querySelector("#numTokens").value);
   var array = Array.from(new Array(length).keys())
     .map(x => "NCI-" + (x + start))
-    .map(x => ({ studyId: x, pin: x }));
+    .map(x => ({ studyId: x }));
   console.log(array);
   var body = JSON.stringify({ data: JSON.stringify(array) })
     .replace(/\"\[/g, "[")
@@ -35,10 +35,13 @@ async function invite(formElement) {
     .then(res => res.json())
     .then(x => {
       console.log(x);
-      var txt = '<table class="table table-striped"><thead><tr><th>Study Id</th><th>Token</th><th>url</th></tr></thead>';
+      var txt =
+        '<table class="table table-striped"><thead><tr><th>Study Id</th><th>Pin</th><th>Token</th><th>url</th></tr></thead>';
       x.data.forEach(token => {
         txt +=
           "<tr><td>" +
+          token.studyId +
+          "</td><td>" +
           token.pin +
           "</td><td>" +
           token.token +
