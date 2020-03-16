@@ -1,0 +1,12 @@
+body {
+    color:navy;
+    font-family:sans-serif;
+    border-style: solid;
+    border-width: 20;
+    border-color:white
+}
+
+a:hover {
+    background-color:yellow;
+    color:red
+}
